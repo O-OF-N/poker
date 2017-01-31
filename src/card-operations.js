@@ -7,22 +7,28 @@ export const constructAllCards = () => new PopOnlyStack(SUITS.map(suit => VALUES
 
 //Cards are shuffled. O(n)
 export const shuffleCards = cards => {
-    let shuffledCards = [].concat(cards.cards);
-    const length = shuffledCards.length;
-    for (let i = 0; i < length; i++) {
-        const rand = random(0, length - 1);
-        const temp = shuffledCards[rand];
-        shuffledCards[rand] = shuffledCards[i];
-        shuffledCards[i] = temp;
-    };
-    return shuffledCards;
+    if (!cards || !cards.cards || !cards.cards instanceof Array || !cards.cards.length) return [];
+    try {
+        let shuffledCards = [].concat(cards.cards);
+        const length = shuffledCards.length;
+        for (let i = 0; i < length; i++) {
+            const rand = random(0, length - 1);
+            const temp = shuffledCards[rand];
+            shuffledCards[rand] = shuffledCards[i];
+            shuffledCards[i] = temp;
+        };
+        return shuffledCards;
+    } catch (err) {
+        console.log(err);
+        return [];
+    }
 };
 
 //When given an input, generates range. Similar to range function in python
 export const range = max => [...Array(max).keys()]
 
 //Fetches the last card from the stack.
-export const dealCard = cards => cards.pop();
+export const dealCard = cards => cards && cards instanceof Array && cards.length ? cards.pop() : null;
 
 //Builds players by passing them name and their card stack empty.
 export const buildPlayers = count => range(count).map(playerId => new Player(`player-${playerId}`));
