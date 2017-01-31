@@ -22,7 +22,7 @@ This project has 2 methods in index.js and their functionalities are as describe
         * Constructs all the 52 cards
         * Builds 4 players. With players names as 'Player-0' to 'Player-4'
         * Shuffled the cards.
-        * Deals 2 cards to each payer in a cyclic fashion. So a deal of one card each to each       player, followed by another deal.
+        * Deals 2 cards to each payer in a cyclic fashion.So a deal of one card each to each player, followed by another deal.
         * Constructs a board, and adds 3 cards to the board (Flop)
         * Adds one more card to the board(Turn)
         * Adds one more card to the board(River)
