@@ -13,7 +13,8 @@ This project has 2 methods in index.js and their functionalities are as describe
 1) shuffleAndDeal
         * Constructs all the 52 cards
         * Shuffles them that way, each time the order is different
-        * Deals a single card. If there are no more cards in the stack 'No cards to be dealt' will be printed. Else the dealt card will be printed.
+        * Deals a single card. 
+        * If there are no more cards in the stack 'No cards to be dealt' will be printed. Else the dealt card will be printed.
 
 2) playGame
         * Constructs all the 52 cards
