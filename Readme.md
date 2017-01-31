@@ -11,11 +11,10 @@ Steps to run the test cases:
 This project has 2 methods in index.js and their functionalities are as described below:
 
 1) shuffleAndDeal
-
-        i Constructs all the 52 cards
-        ii Shuffles them that way, each time the order is different
-        iii Deals a single card. 
-        iv If there are no more cards in the stack 'No cards to be dealt' will be printed. Else the dealt card will be printed.
+    * Constructs all the 52 cards
+    * Shuffles them that way, each time the order is different
+    * Deals a single card. 
+    * If there are no more cards in the stack 'No cards to be dealt' will be printed. Else the dealt card will be printed.
 
 2) playGame
 
